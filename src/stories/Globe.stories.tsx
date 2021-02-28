@@ -219,7 +219,7 @@ CustomMaterial.args = {
     directionalLight.position.set(1, 1, 1); // change light position to see the specularMap's effect
 
     // Setup renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById("globeViz").appendChild(renderer.domElement);
 
@@ -381,7 +381,7 @@ Labels.args = {
       .labelColor("color");
 
     // Setup renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById("globeViz").appendChild(renderer.domElement);
 
@@ -514,7 +514,7 @@ Paths.args = {
     }, 6000);
 
     // Setup renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById("globeViz").appendChild(renderer.domElement);
 
@@ -674,7 +674,7 @@ Tiles.args = {
       .tileMaterial("material");
 
     // Setup renderer
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.getElementById("globeViz").appendChild(renderer.domElement);
 
@@ -695,6 +695,9 @@ Tiles.args = {
     tbControls.minDistance = 101;
     tbControls.rotateSpeed = 5;
     tbControls.zoomSpeed = 0.8;
+    tbControls.noPan = true;
+    tbControls.noRotate = false;
+    tbControls.dynamicDampingFactor = 0.8;
 
     // Kick-off renderer
     (function animate() {
