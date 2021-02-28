@@ -47,7 +47,7 @@ export default Kapsule({
   stateInit: () => {
     // create globe
     const globeGeometry = new THREE.SphereBufferGeometry(GLOBE_RADIUS, 75, 75);
-    const globeObj = new THREE.Mesh(globeGeometry, new THREE.MeshPhongMaterial({ color: 0x000000, transparent: true }));
+    const globeObj = new THREE.Mesh(globeGeometry, new THREE.MeshPhongMaterial({ color: 0xffffff, transparent: true }));
     globeObj.rotation.y = -Math.PI / 2; // face prime meridian along Z axis
     globeObj.__globeObjType = 'globe'; // Add object type
 
@@ -94,7 +94,7 @@ export default Kapsule({
     if (changedProps.hasOwnProperty('globeImageUrl')) {
       if (!state.globeImageUrl) {
         // Black globe if no image
-        !globeMaterial.color && (globeMaterial.color = new THREE.Color(0x000000));
+        !globeMaterial.color && (globeMaterial.color = new THREE.Color(0xffffff));
       } else {
         new THREE.TextureLoader().load(state.globeImageUrl, texture => {
           globeMaterial.map = texture;
