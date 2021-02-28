@@ -1,10 +1,10 @@
 <head>
   <style> body { margin: 0; } </style>
 
-  <script src="//unpkg.com/three"></script>
-  <script src="//unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
-  <script src="//unpkg.com/three-globe"></script>
-  <!--<script src="../../dist/three-globe.js"></script>-->
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
+  <script src="https://unpkg.com/three-globe"></script>
+  <!-- <script src="../../dist/three-globe.js"></script> -->
 </head>
 
 <body>
@@ -21,8 +21,8 @@
     }));
 
     const Globe = new ThreeGlobe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-      .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+      .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+      .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
       .pointsData(gData)
       .pointAltitude('size')
       .pointColor('color');
